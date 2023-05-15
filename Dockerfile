@@ -2,6 +2,6 @@ FROM node:alpine
 EXPOSE 3000
 WORKDIR ./
 COPY package.json ./
-RUN  npm install && npm uninstall http-errors
+RUN  npm uninstall http-errors && npm install
 COPY . ./
 CMD ["npm", "start"]
